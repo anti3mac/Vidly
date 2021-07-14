@@ -5,28 +5,29 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class CustomerController : Controller
     {
-        private IEnumerable<Customer> GetCustomers() 
-        { 
-            return new List<Customer> 
-            { 
-                new Customer { Id = 1, Name = "John Smith" }, new Customer { Id = 2, Name = "Mary Williams" } 
-            }; 
+        private ApplicationDbContext _context;
+
+        public CustomerController()
+        {
+            _context = new ApplicationDbContext();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Customer
         [Route("Customer")]
         public ActionResult Customer()
         {
-            //var customer = new List<Customer>
-            //{
-            //    new Customer {Id = 1,Name = "Customer 1"},
-            //    new Customer {Id = 2,Name = "Customer 2"}
-            //};
-            var customer = GetCustomers().ToList();
+            var customer = _context.Customers.Include(c=> c.MembershipType).ToList();
             var viewModel = new RandomMovieViewModel
             {
                 Customers = customer
@@ -37,7 +38,7 @@ namespace Vidly.Controllers
         [Route("Customer/{Id}")]
         public ActionResult Details(int id)
         {
-            var customer = GetCustomers().SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
             if (customer == null)
                 return HttpNotFound();
             return View(customer);

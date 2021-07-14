@@ -110,3 +110,5 @@ F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModel.re
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplayAnnotationsToCustomerName.resources
