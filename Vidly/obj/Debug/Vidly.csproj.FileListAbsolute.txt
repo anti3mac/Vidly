@@ -106,3 +106,7 @@ F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.c
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.dll
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.pdb
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModel.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
