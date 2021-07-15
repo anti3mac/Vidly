@@ -112,3 +112,5 @@ F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribed
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplayAnnotationsToCustomerName.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNamePropertyOnMembershipType.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulatedMembershipTypeWithName.resources
