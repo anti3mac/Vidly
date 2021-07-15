@@ -114,3 +114,5 @@ F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembers
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplayAnnotationsToCustomerName.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNamePropertyOnMembershipType.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulatedMembershipTypeWithName.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedBirthdateCustomer.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedBirthdateCustomer1.resources
