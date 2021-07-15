@@ -4,11 +4,34 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Movie.Name</h2>
-<ul>
-    @foreach(var cName in Model.Customers)
-            {
-                <li>@cName.Name</li>
-            }
-</ul>
 
+@*<ul>
+    <li>Movie Name </li>
+    <li> Genre </li>
+</ul>
+@foreach (var movie in Model.Movie)
+{
+    <ul>
+
+        <li>@movie.Name </li>
+        <td> @movie.Genre.Name </td>
+
+    </ul>
+}*@
+<table>
+    <thead>
+        <tr>
+            <th>Movie Name</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var movie in Model.Movie)
+        {
+            <tr>
+                <td><a href="/movies/details/@movie.Id">@movie.Name</a></td>
+                <td>@movie.Genre.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

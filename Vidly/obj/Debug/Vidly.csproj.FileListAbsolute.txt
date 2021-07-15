@@ -116,3 +116,6 @@ F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNameProperty
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulatedMembershipTypeWithName.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedBirthdateCustomer.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedBirthdateCustomer1.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedGenreClass.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenre.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedGenreData.resources
