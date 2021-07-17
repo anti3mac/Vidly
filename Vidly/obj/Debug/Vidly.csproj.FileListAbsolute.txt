@@ -119,3 +119,8 @@ F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedBirthdateC
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedGenreClass.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateGenre.resources
 F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedGenreData.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulatedMovieAttributes.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedRequirementsOnMovieAttributes.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedRequiredGerneInMovie.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddedGenreIdInMovie.resources
+F:\Visual Studio\Projects\Vidly\Vidly\obj\Debug\Vidly.Migrations.DropColumGenre_IdFromMovie.resources

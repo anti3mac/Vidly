@@ -21,6 +21,7 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
+
         // GET: Movies
         public ActionResult Random()
         {
@@ -31,6 +32,38 @@ namespace Vidly.Controllers
             };
             return View(viewModel);
         }
+
+        public ActionResult New()
+        {
+            var genre = _context.Genre.ToList();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Genre = genre
+            };
+            return View("New",viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if(movie.Id == 0)
+                _context.Movies.Add(movie);
+            _context.SaveChanges();
+            //try
+            //{
+                
+            //}
+            //catch (Dbentityvalidationexception e)
+            //{
+            //    Console.WriteLine(e);
+            //}
+            
+
+            return RedirectToAction("Random", "Movies");
+        }
+
+
         [Route("movies/details/{id}")]
         public ActionResult Details(int id)
         {
