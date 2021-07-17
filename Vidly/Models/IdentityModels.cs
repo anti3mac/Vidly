@@ -25,7 +25,7 @@ namespace Vidly.Models
         public DbSet<Movie> Movies { get; set; }
 
         public DbSet<MembershipType> MembershipType { get; set; }
-        
+        public DbSet<Genre> Genre { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

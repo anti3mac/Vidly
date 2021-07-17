@@ -68,15 +68,6 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
-        //[Route("Customer/{Id}")]
-        //public ActionResult Details(int id)
-        //{
-        //    var customer = _context.Customers.Include(c=>c.MembershipType).SingleOrDefault(c => c.Id == id);
-        //    if (customer == null)
-        //        return HttpNotFound();
-        //    return View(customer);
-        //}
-
         
         public ActionResult Edit(int id)
         {

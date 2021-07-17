@@ -9,6 +9,7 @@
         <tr>
             <th>Movie Name</th>
             <th>Genre</th>
+            <th><a href="/Movies/new" class="btn btn-primary">NEW MOVIE</a></th>
         </tr>
     </thead>
     <tbody>
@@ -16,7 +17,7 @@
         {
             <tr>
                 <td><a href="/movies/details/@movie.Id">@movie.Name</a></td>
-                <td>@movie.Genre.Name</td>
+                @*<td>@movie.Genre.Name</td>*@
             </tr>
         }
     </tbody>
