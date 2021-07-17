@@ -23,6 +23,39 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+        //[Route("Customer/CustomerForm")]
+        public ActionResult CustomerForm()
+        {
+            var membershipType = _context.MembershipType.ToList();
+            var viewModel = new CustomerFormViewModel
+            {
+                MembershipType = membershipType
+            };
+            return View("CustomerForm",viewModel);
+        }
+
+        // Createing Customer
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            if(customer.Id == 0)
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                //We can not use this , bcoz it will create a security issue, Create a hole in our code. TryUpdateModel(customerInDb);
+                customerInDb.Name = customer.Name;
+                customerInDb.Birthdate = customer.Birthdate;
+                customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                customerInDb.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Customer","Customer");
+        }
+
         // GET: Customer
         [Route("Customer")]
         public ActionResult Customer()
@@ -35,13 +68,29 @@ namespace Vidly.Controllers
             return View(viewModel);
         }
 
-        [Route("Customer/{Id}")]
-        public ActionResult Details(int id)
+        //[Route("Customer/{Id}")]
+        //public ActionResult Details(int id)
+        //{
+        //    var customer = _context.Customers.Include(c=>c.MembershipType).SingleOrDefault(c => c.Id == id);
+        //    if (customer == null)
+        //        return HttpNotFound();
+        //    return View(customer);
+        //}
+
+        
+        public ActionResult Edit(int id)
         {
-            var customer = _context.Customers.Include(c=>c.MembershipType).SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+
             if (customer == null)
                 return HttpNotFound();
-            return View(customer);
+
+            var viewModel = new CustomerFormViewModel
+            {
+                Customer = customer,
+                MembershipType = _context.MembershipType.ToList()
+            };
+            return View("CustomerForm",viewModel);
         }
     }
 }
