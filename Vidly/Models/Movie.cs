@@ -15,12 +15,6 @@ namespace Vidly.Models
         [StringLength(255)]
         public string Name { get; set; }
 
-        
-        public Genre Genre { get; set; }
-
-        [Required]
-        public byte GenreId { get; set; }
-
         [Required]
         [Column(TypeName = "date")]
         public DateTime ReleaseDate { get; set; }
@@ -28,7 +22,12 @@ namespace Vidly.Models
         [Required]
         public int NumberInStock { get; set; }
 
-        
+        public Genre Genre { get; set; }
+
+        [Required]
+        public byte GenreId { get; set; }
+
+
 
     }
 }

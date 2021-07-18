@@ -44,34 +44,39 @@ namespace Vidly.Controllers
             return View("New",viewModel);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(c=>c.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = movie,
+                Genre = _context.Genre.ToList()
+            };
+            return View("New",viewModel);
+        }
+
         [HttpPost]
         public ActionResult Save(Movie movie)
         {
             if(movie.Id == 0)
                 _context.Movies.Add(movie);
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+                //We can not use this , bcoz it will create a security issue, Create a hole in our code. TryUpdateModel(customerInDb);
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.NumberInStock = movie.NumberInStock;
+
+            }
             _context.SaveChanges();
-            //try
-            //{
-                
-            //}
-            //catch (Dbentityvalidationexception e)
-            //{
-            //    Console.WriteLine(e);
-            //}
             
-
             return RedirectToAction("Random", "Movies");
-        }
-
-
-        [Route("movies/details/{id}")]
-        public ActionResult Details(int id)
-        {
-            var movie = _context.Movies.Include(c=>c.Genre).SingleOrDefault(c=>c.Id == id);
-            //var movie = _context.Movies.Include(c => c.Id == id).SingleOrDefault();
-            if (movie == null)
-                return HttpNotFound();
-            return View(movie);
         }
     }
 }
