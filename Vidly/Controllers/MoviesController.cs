@@ -25,7 +25,8 @@ namespace Vidly.Controllers
         // GET: Movies
         public ActionResult Random()
         {
-            var movie = _context.Movies.Include(c=>c.Genre).ToList();
+            //var movie = _context.Movies.Include(c=>c.Genre).ToList();
+            var movie = _context.Movies.ToList();
             var viewModel = new RandomMovieViewModel
             {
                 Movie = movie
@@ -67,7 +68,8 @@ namespace Vidly.Controllers
         [Route("movies/details/{id}")]
         public ActionResult Details(int id)
         {
-            var movie = _context.Movies.Include(c=>c.Genre).SingleOrDefault(c=>c.Id == id);
+            //var movie = _context.Movies.Include(c=>c.Genre).SingleOrDefault(c=>c.Id == id);
+            var movie = _context.Movies.SingleOrDefault(c=>c.Id == id);
             //var movie = _context.Movies.Include(c => c.Id == id).SingleOrDefault();
             if (movie == null)
                 return HttpNotFound();
