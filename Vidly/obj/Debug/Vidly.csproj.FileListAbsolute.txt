@@ -235,3 +235,9 @@ F:\Visual Studio\Projects\Vidly\obj\Debug\Vidly.pdb
 F:\Visual Studio\Projects\Vidly\obj\Debug\Vidly.Migrations.ResetMigration.resources
 F:\Visual Studio\Projects\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
 F:\Visual Studio\Projects\Vidly\obj\Debug\Vidly.Migrations.DropStockInFromGenre.resources
+F:\Visual Studio\Projects\Vidly\bin\System.Net.Http.Formatting.dll
+F:\Visual Studio\Projects\Vidly\bin\System.Web.Http.dll
+F:\Visual Studio\Projects\Vidly\bin\System.Web.Http.WebHost.dll
+F:\Visual Studio\Projects\Vidly\bin\System.Net.Http.Formatting.xml
+F:\Visual Studio\Projects\Vidly\bin\System.Web.Http.xml
+F:\Visual Studio\Projects\Vidly\bin\System.Web.Http.WebHost.xml
